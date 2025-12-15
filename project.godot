@@ -1,0 +1,53 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+[application]
+
+config/name="LaDeuda"
+run/main_scene="res://intro.tscn"
+boot_splash/show_image=false
+boot_splash/bg_color=Color( 0, 0, 0, 1 )
+config/icon="res://icon.png"
+
+[autoload]
+
+movie="*res://movie.gd"
+
+[display]
+
+window/size/width=960
+window/size/height=544
+window/stretch/mode="viewport"
+window/stretch/aspect="keep_width"
+
+[global]
+
+icon=false
+fallbac=false
+
+[gui]
+
+common/drop_mouse_on_gui_input_disabled=true
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+quality/driver/driver_name="GLES2"
+quality/driver/fallback_to_gles2=true
+vram_compression/import_etc=true
+vram_compression/import_etc2=false
+environment/default_environment="res://default_env.tres"
+gles2/image=""
+gles2/bg_color=Color( 0.14, 0.14, 0.14, 1 )
+gles2/show_image=true
+gles2/size/test_width=0
