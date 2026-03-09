@@ -6,14 +6,15 @@
 ;   [section] ; section goes between []
 ;   param=value ; assign values to parameters
 
-config_version=4
+config_version=5
 
 [application]
 
 config/name="LaDeuda"
 run/main_scene="res://intro.tscn"
+config/features=PackedStringArray("4.3")
+boot_splash/bg_color=Color(0, 0, 0, 1)
 boot_splash/show_image=false
-boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://icon.png"
 
 [autoload]
@@ -22,10 +23,14 @@ movie="*res://movie.gd"
 
 [display]
 
-window/size/width=960
-window/size/height=544
+window/size/viewport_width=1280
+window/size/viewport_height=720
 window/stretch/mode="viewport"
 window/stretch/aspect="keep_width"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gde_gozen/plugin.cfg")
 
 [global]
 
@@ -42,12 +47,13 @@ common/enable_pause_aware_picking=true
 
 [rendering]
 
+renderer/rendering_method="mobile"
+textures/vram_compression/import_etc2_astc=true
+environment/defaults/default_environment="res://default_env.tres"
 quality/driver/driver_name="GLES2"
 quality/driver/fallback_to_gles2=true
 vram_compression/import_etc=true
-vram_compression/import_etc2=false
-environment/default_environment="res://default_env.tres"
 gles2/image=""
-gles2/bg_color=Color( 0.14, 0.14, 0.14, 1 )
+gles2/bg_color=Color(0.14, 0.14, 0.14, 1)
 gles2/show_image=true
 gles2/size/test_width=0

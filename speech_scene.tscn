@@ -1,17 +1,30 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://dth75pk50vtk6"]
 
-[ext_resource path="res://videos/speech_game.ogv" type="VideoStream" id=1]
-[ext_resource path="res://long_speech.gd" type="Script" id=2]
+[ext_resource type="VideoStream" path="res://videos/speech_game.ogv" id="1"]
+[ext_resource type="Script" path="res://long_speech.gd" id="2"]
 
 [node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 2 )
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2")
 
-[node name="VideoPlayer" type="VideoPlayer" parent="."]
-margin_right = 1280.0
-margin_bottom = 720.0
-stream = ExtResource( 1 )
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_left = -2644.0
+offset_top = -1064.0
+offset_right = 4326.0
+offset_bottom = 2086.0
+color = Color(0, 0, 0, 1)
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
+layout_mode = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+stream = ExtResource("1")
 autoplay = true
 
-[connection signal="finished" from="VideoPlayer" to="." method="_on_VideoPlayer_finished"]
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_VideoPlayer_finished"]
