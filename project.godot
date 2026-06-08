@@ -19,6 +19,7 @@ config/icon="res://icon.png"
 
 [autoload]
 
+WavedashSDK="*res://addons/wavedash/WavedashSDK.gd"
 movie="*res://movie.gd"
 
 [display]

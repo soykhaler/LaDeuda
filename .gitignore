@@ -1,0 +1,8 @@
+# macOS
+.DS_Store
+
+# Godot 4+ engine import cache (regenerated on open/import)
+.godot/
+
+# Local export / build output
+exports/
