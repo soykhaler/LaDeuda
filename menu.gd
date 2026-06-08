@@ -1,7 +1,9 @@
 extends Control
 func _ready():
 	controller()
-	pass
+	# No "Salir"/quit on web (Wavedash) builds — you can't exit a browser-tab game.
+	if OS.has_feature("web"):
+		$Button2.hide()
 func _on_Button_pressed():
 	$fadeout.play("fadeout")
 	await get_tree().create_timer(1).timeout
